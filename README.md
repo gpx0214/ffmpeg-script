@@ -1,13 +1,13 @@
 
-1 安装MinGW+MSYS
-C:\MinGW\msys\1.0\msys.bat
-根据VS的安装情况在第一行前面加
-call "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\vcvars32.bat"
-参考:http://blog.csdn.net/bobsweetie/article/details/50858358
-
-2 准备工作
-2.1 下载SDL1.2 解决编译不输出ffplay的问题
-http://www.libsdl.org/release/SDL-1.2.14.tar.gz
+1 安装MinGW+MSYS 
+C:\MinGW\msys\1.0\msys.bat 
+根据VS的安装情况在第一行前面加 
+call "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\vcvars32.bat" 
+参考:http://blog.csdn.net/bobsweetie/article/details/50858358 
+ 
+2 准备工作 
+2.1 下载SDL1.2 解决编译不输出ffplay的问题 
+http://www.libsdl.org/release/SDL-1.2.14.tar.gz 
 bin 全部复制到C:/msys/mingw/lib 
 include 全部复制到C:/msys/mingw/include 
 lib 全部复制到C:/msys/mingw/bin 
