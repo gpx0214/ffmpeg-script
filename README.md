@@ -5,9 +5,9 @@
 
 下载SDL1.2
 http://www.libsdl.org/release/SDL-1.2.14.tar.gz
-bin 全部复制到C:/msys/mingw/lib
-include 全部复制到C:/msys/mingw/include
-lib 全部复制到C:/msys/mingw/bin，
+bin 全部复制到C:/msys/mingw/lib 
+include 全部复制到C:/msys/mingw/include 
+lib 全部复制到C:/msys/mingw/bin 
 i386-mingw32msvc-sdl-config重命名为sdl-config 修改配置prefix=c:/MinGW
 
 yasm.exe放到bin
