@@ -1,3 +1,25 @@
+安装MinGW+MSYS
+
+打开C:\MinGW\msys\1.0\msys.bat
+顶级目录相当于C:\MinGW\msys\1.0\
+
+下载SDL1.2
+http://www.libsdl.org/release/SDL-1.2.14.tar.gz
+bin 全部复制到C:/msys/mingw/lib
+include 全部复制到C:/msys/mingw/include
+lib 全部复制到C:/msys/mingw/bin，
+i386-mingw32msvc-sdl-config重命名为sdl-config 修改配置prefix=c:/MinGW
+
+yasm.exe放到bin
+
+切换到ffmpeg源码目录
+
+编译命令
+>>./configure --enable-memalign-hack --disable-debug --enable-shared --disable-static
+输出 
+>>Creating config.mak, config.h, and doc/config.texi...
+
+>>make
 
 
 # ffmpeg-script
