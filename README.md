@@ -1,9 +1,14 @@
+
+
 # ffmpeg-script
 script of ffmpeg
 
 ffmpeg官方网站 https://ffmpeg.org
 
-windows编译好的文件 static是单文件版，集成了大部分解码器
+windows编译好的文件
+static是静态编译单文件版，集成了大部分解码器
+shared是动态编译的exe+dll
+dev是.h和.lib等
 https://ffmpeg.zeranoe.com/builds/
 
 ## 基本用法
