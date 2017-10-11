@@ -15,11 +15,11 @@ yasm.exe放到bin
 切换到ffmpeg源码目录
 
 编译命令
->>./configure --enable-memalign-hack --disable-debug --enable-shared --disable-static
+>./configure --enable-memalign-hack --disable-debug --enable-shared --disable-static
 输出 
->>Creating config.mak, config.h, and doc/config.texi...
+>Creating config.mak, config.h, and doc/config.texi...
 
->>make
+>make
 
 
 # ffmpeg-script
