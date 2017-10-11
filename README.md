@@ -1,22 +1,40 @@
-安装MinGW+MSYS
 
-打开C:\MinGW\msys\1.0\msys.bat
-顶级目录相当于C:\MinGW\msys\1.0\
+1 安装MinGW+MSYS
+C:\MinGW\msys\1.0\msys.bat
+根据VS的安装情况在第一行前面加
+call "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\vcvars32.bat"
+参考:http://blog.csdn.net/bobsweetie/article/details/50858358
 
-下载SDL1.2
+2 准备工作
+2.1 下载SDL1.2 解决编译不输出ffplay的问题
 http://www.libsdl.org/release/SDL-1.2.14.tar.gz
 bin 全部复制到C:/msys/mingw/lib 
 include 全部复制到C:/msys/mingw/include 
 lib 全部复制到C:/msys/mingw/bin 
 i386-mingw32msvc-sdl-config重命名为sdl-config 修改配置prefix=c:/MinGW
 
-yasm.exe放到bin
+2.1 下载YASM 解决yasm不存在影响部分.o文件生成的error
+访问http://yasm.tortall.net/Download.html
+选通用版的 Win32 .exe (for general use on 32-bit Windows) 
+参考:http://blog.csdn.net/hutianyou123/article/details/76515947
+下载http://www.tortall.net/projects/yasm/releases/yasm-1.3.0-win32.exe
+改名yasm.exe，复制到D:/MinGW/msys/1.0/bin
 
+2.1 安装pkg-config
+解决"pkg-config not found, library detection may fail."
+https://pkg-config.freedesktop.org/releases/pkg-config-0.29.tar.gz
+放到msys\bin
+http://ftp.gnome.org/pub/gnome/binaries/win32/glib/2.18/glib_2.18.4-1_win32.zip
+bin\libglib-2.0-0.dll放到msys\bin 不要用新版本
+
+打开C:\MinGW\msys\1.0\msys.bat
+顶级目录相当于C:\MinGW\msys\1.0\
 切换到ffmpeg源码目录
 
 编译命令
 >./configure --enable-memalign-hack --disable-debug --enable-shared --disable-static
-输出 
+输出
+>检查SDL 后面的支持情况 对生成ffplay很重要
 >Creating config.mak, config.h, and doc/config.texi...
 
 >make
