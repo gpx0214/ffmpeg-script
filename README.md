@@ -22,7 +22,7 @@ http://www.libsdl.org/release/SDL-1.2.14.tar.gz
 bin 全部复制到C:/msys/mingw/lib 
 include 全部复制到C:/msys/mingw/include 
 lib 全部复制到C:/msys/mingw/bin 
-i386-mingw32msvc-sdl-config重命名为sdl-config 修改配置prefix=c:/MinGW
+i386-mingw32msvc-sdl-config重命名为sdl-config 修改配置prefix=c:/MinGW  prefix=c:/MinGW
 
 2.1 下载YASM 解决yasm不存在影响部分.o文件生成的error
 访问http://yasm.tortall.net/Download.html
