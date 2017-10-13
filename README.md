@@ -1,5 +1,5 @@
 
-ffmpeg2.3.6
+##ffmpeg2.3.6 
 1 安装MinGW+MSYS 
 C:\MinGW\msys\1.0\msys.bat 
 根据VS的安装情况在第一行前面加 
@@ -26,7 +26,8 @@ i386-mingw32msvc-sdl-config重命名为sdl-config 修改配置prefix=c:/MinGW
 https://pkg-config.freedesktop.org/releases/pkg-config-0.29.tar.gz
 放到msys\bin
 http://ftp.gnome.org/pub/gnome/binaries/win32/glib/2.18/glib_2.18.4-1_win32.zip
-bin\libglib-2.0-0.dll放到msys\bin 不要用新版本
+bin\libglib-2.0-0.dll放到msys\bin 不要用新版本 
+win下打开bin\pkg-config.exe检查libglib-2.0-0.dll是否正常
 
 打开C:\MinGW\msys\1.0\msys.bat
 顶级目录相当于C:\MinGW\msys\1.0\
