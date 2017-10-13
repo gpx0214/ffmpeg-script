@@ -1,4 +1,5 @@
 
+ffmpeg2.3.6
 1 安装MinGW+MSYS 
 C:\MinGW\msys\1.0\msys.bat 
 根据VS的安装情况在第一行前面加 
