@@ -195,3 +195,8 @@ http://qgzb.cnr.cn/live/mp4:bjwygb/playlist.m3u8
 http://qgzb.cnr.cn/live/bjjtgb/playlist.m3u8
 
 </pre>
+http://playback.rbc.cn/audioD/fm1039/20171204/0730007200_mp4/073000_7200_96K.mp4
+http://playback.rbc.cn/audioD/fm1039/20171204/0730007200_mp4/073000_7200_96K.mp4
+<pre>
+
+</pre>
