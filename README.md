@@ -63,6 +63,9 @@ ffmpeg -i input.flv -vcodec copy -acodec copy output.mp4
 ## 提取音频
 ffmpeg -i input.mp4 -vn -acodec copy output.aac
 
+## 剪辑 mp2 0.024s整倍数
+ffmpeg -i "0.mp2" -ss 2:44:05.784 -to 2:47:52.464 -acodec copy "1.mp2"
+
 ## 定长录制命令
 ffmpeg -i http://ipv6.bjtu.edu.cn/hls/cctv1hd.m3u8 -vcodec copy -acodec copy -t 60 "C:\%DATE:~0,4%-%DATE:~5,2%-%DATE:~8,2% %TIME:~0,2%%TIME:~3,2%%TIME:~6,2%.ts"
 
