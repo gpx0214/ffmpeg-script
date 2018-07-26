@@ -1,0 +1,768 @@
+sudo aptitude install build-essential git pkg-config libssl-dev bzip2 wget
+sudo aptitude install libavahi-client-dev zlib1g-dev libavcodec-dev libavutil-dev libavformat-dev libswscale-dev libavresample-dev
+dvb-apps
+libdevsca1
+libdevsca-dev
+liburiparser1
+liburiparser-dev
+libva-dev
+ libva-x11-1 libva-drm1
+libpcre2
+// libbsd-dev
+
+pi@raspberrypi:~/tvheadend $ ./configure
+Checking support/features
+  checking for cc execinfo.h ...                    ok
+  checking for cc -mmmx ...                         fail
+  checking for cc -msse2 ...                        fail
+  checking for cc -Wunused-result ...               ok
+  checking for cc strlcat ...                       fail
+  checking for cc strlcpy ...                       fail
+  checking for cc getloadavg ...                    ok
+  checking for cc atomic32 ...                      ok
+  checking for cc atomic64 ...                      ok
+  checking for cc atomic_time_t ...                 ok
+  checking for cc atomic_ptr ...                    ok
+  checking for cc bitops64 ...                      ok
+  checking for cc lockowner ...                     ok
+  checking for cc qsort_r ...                       ok
+  checking for cc stime ...                         ok
+  checking for cc gmtoff ...                        ok
+  checking for cc recvmmsg ...                      ok
+  checking for cc sendmmsg ...                      ok
+  checking for cc libiconv ...                      fail
+    ^ using build-in glibc iconv routines
+  checking for cc ifnames ...                       ok
+  checking for cc cclang_threadsan ...              fail
+  checking for py module gzip ...                   ok
+  checking for pkg-config ...                       ok
+  checking for xgettext ...                         ok
+  checking for msgmerge ...                         ok
+  checking for gzip ...                             ok
+  checking for bzip2 ...                            ok
+  checking for pkg openssl  ...                     ok (detected 1.0.1t)
+  checking for cc linux/dvb/version.h ...           ok
+  checking for pkg zlib  ...                        ok (detected 1.2.8)
+  checking for pkg libpcre2-8  ...                  fail (detected <none>)
+  checking for pkg libpcre  ...                     ok (detected 8.35)
+  checking for pkg liburiparser  ...                ok (detected 0.8.0.1)
+  checking for pkg avahi-client  ...                ok (detected 0.6.31)
+  checking for cmake ...                            ok
+  checking for cc -lstdc++ ...                      ok
+  checking for pkg libva >=0.38.0 ...               ok (detected 0.39.4)
+  checking for pkg libva-x11 >=0.38.0 ...           ok (detected 0.39.4)
+  checking for pkg libva-drm >=0.38.0 ...           ok (detected 0.39.4)
+  checking for cc sys/inotify.h ...                 ok
+  checking for cc inotify_init1 ...                 ok
+  checking for cc dvbcsa/dvbcsa.h ...               ok
+  checking for cc -ldvbcsa ...                      ok
+  fetching dvb-scan files ...                       ok
+  checking for cc epoll_create1 ...                 ok
+  checking for pkg dbus-1  ...                      ok (detected 1.8.22)
+
+Compiler:
+  Using C compiler:                        cc
+  Using LD flags:                           -ldvbcsa
+  Build for arch:                          arm
+
+Binaries:
+  Using PYTHON:                            python
+  Using GZIP:                              gzip
+  Using BZIP2:                             bzip2
+
+Options:
+  pie                                      yes
+  ccdebug                                  no
+  cardclient                               yes
+  cwc                                      yes
+  cccam                                    yes
+  capmt                                    yes
+  constcw                                  yes
+  linuxdvb                                 yes
+  satip_server                             yes
+  satip_client                             yes
+  hdhomerun_client                         yes
+  hdhomerun_static                         yes
+  iptv                                     yes
+  tsfile                                   yes
+  dvbscan                                  yes
+  timeshift                                yes
+  trace                                    yes
+  imagecache                               yes
+  avahi                                    yes
+  zlib                                     yes
+  libav                                    yes
+  ffmpeg_static                            yes
+  libx264                                  yes
+  libx264_static                           yes
+  libx265                                  yes
+  libx265_static                           yes
+  libvpx                                   yes
+  libvpx_static                            yes
+  libtheora                                yes
+  libtheora_static                         yes
+  libvorbis                                yes
+  libvorbis_static                         yes
+  libfdkaac                                no
+  libfdkaac_static                         no
+  libopus                                  yes
+  libopus_static                           yes
+  nvenc                                    no
+  vaapi                                    yes
+  mmal                                     no
+  omx                                      no
+  inotify                                  yes
+  epoll                                    yes
+  pcre                                     yes
+  pcre2                                    no
+  uriparser                                yes
+  ccache                                   no
+  tvhcsa                                   yes
+  bundle                                   no
+  pngquant                                 no
+  kqueue                                   no
+  dbus_1                                   yes
+  android                                  no
+  gtimer_check                             no
+  slow_memoryinfo                          no
+  libsystemd_daemon                        no
+  bintray_cache                            yes
+  ddci                                     yes
+  cclang_threadsan                         no
+  gperftools                               no
+  execinfo                                 yes
+  W_unused_result                          yes
+  getloadavg                               yes
+  atomic32                                 yes
+  atomic64                                 yes
+  atomic_time_t                            yes
+  atomic_ptr                               yes
+  bitops64                                 yes
+  lockowner                                yes
+  qsort_r                                  yes
+  stime                                    yes
+  gmtoff                                   yes
+  recvmmsg                                 yes
+  sendmmsg                                 yes
+  ifnames                                  yes
+  py_gzip                                  yes
+  bin_pkg_config                           yes
+  bin_xgettext                             yes
+  bin_msgmerge                             yes
+  bin_gzip                                 yes
+  bin_bzip2                                yes
+  ssl                                      yes
+  linuxdvbapi                              yes
+  linuxdvb_ca                              yes
+  upnp                                     yes
+  bin_cmake                                yes
+  stdcpp                                   yes
+  libogg_static                            yes
+  hwaccels                                 yes
+  inotify_h                                yes
+  inotify_init1                            yes
+  dvbcsa                                   yes
+  epoll_create1                            yes
+  mpegts                                   yes
+  mpegts_dvb                               yes
+
+Packages:
+  openssl                                  1.0.1t
+  zlib                                     1.2.8
+  libpcre                                  8.35
+  liburiparser                             0.8.0.1
+  avahi-client                             0.6.31
+  libva                                    0.39.4
+  libva-x11                                0.39.4
+  libva-drm                                0.39.4
+  dbus-1                                   1.8.22
+
+Installation paths:
+  Prefix:                                  /usr/local
+  Binaries:                                ${prefix}/bin
+  Libraries:                               ${prefix}/lib
+  Data files:                              ${prefix}/share
+  Man pages:                               ${datadir}/man
+
+Final Binary:
+  /home/pi/tvheadend/build.linux/tvheadend
+
+Tvheadend Data Directory:
+  /usr/local/share/tvheadend
+
+pi@raspberrypi:~/tvheadend $ make
+make -f Makefile.ffmpeg libcacheget
+make[1]: Entering directory '/home/pi/tvheadend'
+DOWNLOAD        https://dl.bintray.com/tvheadend/misc/staticlib/Raspbian%208.0/arm/ffmpeg-eec83ba634e3dd3057772159e1a7eb5e15c4beec.tgz
+--2018-07-26 23:20:48--  https://dl.bintray.com/tvheadend/misc/staticlib/Raspbian%208.0/arm/ffmpeg-eec83ba634e3dd3057772159e1a7eb5e15c4beec.tgz
+正在解析主机 dl.bintray.com (dl.bintray.com)... 75.126.118.188
+正在连接 dl.bintray.com (dl.bintray.com)|75.126.118.188|:443... 已连接。
+已发出 HTTP 请求，正在等待回应... 404 Not Found
+2018-07-26 23:20:49 错误 404：Not Found。
+
+FAILED TO DOWNLOAD https://dl.bintray.com/tvheadend/misc/staticlib/Raspbian%208.0/arm/ffmpeg-eec83ba634e3dd3057772159e1a7eb5e15c4beec.tgz (BUT THIS IS NOT A FATAL ERROR! DO NOT REPORT THAT!)
+make[1]: Leaving directory '/home/pi/tvheadend'
+make -f Makefile.ffmpeg
+make[1]: Entering directory '/home/pi/tvheadend'
+WGET            http://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz
+2018-07-26 23:21:20 URL:http://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz [1492156/1492156] -> "/home/pi/tvheadend/build.linux/ffmpeg/yasm-1.3.0.tar.gz" [1]
+SHA1SUM test 'b7574e9f0826bedef975d64d3825f75fbaeef55e' == 'b7574e9f0826bedef975d64d3825f75fbaeef55e': OK
+UNTAR           yasm-1.3.0.tar.gz
+cd /home/pi/tvheadend/build.linux/ffmpeg/yasm-1.3.0 && CC="gcc -fPIE" FFMPEG_PREFIX=/home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg PKG_CONFIG=/home/pi/tvheadend/support/pkg-config.ffmpeg ./configure --prefix=/ffmpeg --enable-static --disable-shared \
+        --libdir=/ffmpeg/lib
+configure: WARNING: unrecognized options: --enable-static, --disable-shared
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for style of include used by make... GNU
+checking for gcc... gcc -fPIE
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables...
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc -fPIE accepts -g... yes
+checking for gcc -fPIE option to accept ISO C89... none needed
+checking whether gcc -fPIE understands -c and -o together... yes
+checking dependency style of gcc -fPIE... gcc3
+checking how to run the C preprocessor... gcc -fPIE -E
+checking for gcc -fPIE option to accept ISO C99... -std=gnu99
+checking for gcc -fPIE -std=gnu99 option to accept ISO Standard C... (cached) -std=gnu99
+checking whether ln -s works... yes
+checking for ar... ar
+checking for ranlib... ranlib
+checking for xmlto... no
+configure: WARNING: xmlto not found, manpages will not be rebuilt.
+checking if malloc debugging is wanted... no
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for strings.h... (cached) yes
+checking libgen.h usability... yes
+checking libgen.h presence... yes
+checking for libgen.h... yes
+checking for unistd.h... (cached) yes
+checking direct.h usability... no
+checking direct.h presence... no
+checking for direct.h... no
+checking for sys/stat.h... (cached) yes
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking for function prototypes... yes
+checking for size_t... yes
+checking for stdint types... stdint.h (shortcircuit)
+make use of stdint.h in libyasm-stdint.h (assuming C99 compatible system)
+checking for abort... yes
+checking for toascii... yes
+checking for vsnprintf... yes
+checking for strsep... yes
+checking for mergesort... no
+checking for getcwd... yes
+checking for popen... yes
+checking for ftruncate... yes
+checking for strcasecmp... yes
+checking for strncasecmp... yes
+checking for stricmp... no
+checking for _stricmp... no
+checking for strcmpi... no
+checking for a sed that does not truncate output... /bin/sed
+checking whether NLS is requested... yes
+checking for msgfmt... /usr/bin/msgfmt
+checking for gmsgfmt... /usr/bin/msgfmt
+checking for xgettext... /usr/bin/xgettext
+checking for msgmerge... /usr/bin/msgmerge
+checking build system type... armv7l-unknown-linux-gnueabihf
+checking host system type... armv7l-unknown-linux-gnueabihf
+checking for ld used by gcc -fPIE -std=gnu99... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for shared library run path origin... done
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyCurrent... no
+checking for GNU gettext in libc... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... libc
+checking for GNU C Library... yes
+configure: Checking for Python
+checking for a Python interpreter with version >= 2.4... python
+checking for python... /usr/bin/python
+checking for python version... 2.7
+checking for python platform... linux2
+checking for python script directory... ${prefix}/lib/python2.7/site-packages
+checking for python extension module directory... ${exec_prefix}/lib/python2.7/site-packages
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating po/Makefile.in
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libyasm-stdint.h commands
+config.status: creating libyasm-stdint.h : _YASM_LIBYASM_STDINT_H
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+configure: WARNING: unrecognized options: --enable-static, --disable-shared
+DESTDIR=/home/pi/tvheadend/build.linux/ffmpeg/build \
+        make -C /home/pi/tvheadend/build.linux/ffmpeg/yasm-1.3.0 install
+make[2]: Entering directory '/home/pi/tvheadend/build.linux/ffmpeg/yasm-1.3.0'
+gcc -fPIE -std=gnu99  -I.  \
+  -c -o genperf.o `test -f tools/genperf/genperf.c || echo './'`tools/genperf/genperf.c
+gcc -fPIE -std=gnu99  -I.  \
+  -c -o gp-perfect.o `test -f tools/genperf/perfect.c || echo './'`tools/genperf/perfect.c
+gcc -fPIE -std=gnu99  -I.  \
+  -c -o gp-phash.o `test -f libyasm/phash.c || echo './'`libyasm/phash.c
+gcc -fPIE -std=gnu99  -I.  \
+  -c -o gp-xmalloc.o `test -f libyasm/xmalloc.c || echo './'`libyasm/xmalloc.c
+gcc -fPIE -std=gnu99  -I.  \
+  -c -o gp-xstrdup.o `test -f libyasm/xstrdup.c || echo './'`libyasm/xstrdup.c
+gcc -fPIE -std=gnu99 -o genperf  genperf.o gp-perfect.o gp-phash.o gp-xmalloc.o gp-xstrdup.o
+./genperf x86insn_nasm.gperf x86insn_nasm.c
+./genperf x86insn_gas.gperf x86insn_gas.c
+fail to map group of size 2 for tab size 512
+gcc -fPIE -std=gnu99  -I.  \
+  -c -o re2c-main.o `test -f tools/re2c/main.c || echo './'`tools/re2c/main.c
+gcc -fPIE -std=gnu99  -I.  \
+  -c -o re2c-code.o `test -f tools/re2c/code.c || echo './'`tools/re2c/code.c
+gcc -fPIE -std=gnu99  -I.  \
+  -c -o re2c-dfa.o `test -f tools/re2c/dfa.c || echo './'`tools/re2c/dfa.c
+gcc -fPIE -std=gnu99  -I.  \
+  -c -o re2c-parser.o `test -f tools/re2c/parser.c || echo './'`tools/re2c/parser.c
+gcc -fPIE -std=gnu99  -I.  \
+  -c -o re2c-actions.o `test -f tools/re2c/actions.c || echo './'`tools/re2c/actions.c
+gcc -fPIE -std=gnu99  -I.  \
+  -c -o re2c-scanner.o `test -f tools/re2c/scanner.c || echo './'`tools/re2c/scanner.c
+gcc -fPIE -std=gnu99  -I.  \
+  -c -o re2c-mbo_getopt.o `test -f tools/re2c/mbo_getopt.c || echo './'`tools/re2c/mbo_getopt.c
+gcc -fPIE -std=gnu99  -I.  \
+  -c -o re2c-substr.o `test -f tools/re2c/substr.c || echo './'`tools/re2c/substr.c
+gcc -fPIE -std=gnu99  -I.  \
+  -c -o re2c-translate.o `test -f tools/re2c/translate.c || echo './'`tools/re2c/translate.c
+gcc -fPIE -std=gnu99 -o re2c  re2c-main.o re2c-code.o re2c-dfa.o re2c-parser.o re2c-actions.o re2c-scanner.o re2c-mbo_getopt.o re2c-substr.o re2c-translate.o
+./re2c -b -o gas-token.c ./modules/parsers/gas/gas-token.re
+./re2c -b -o nasm-token.c ./modules/parsers/nasm/nasm-token.re
+gcc -fPIE -std=gnu99  -I.  \
+  -c -o genmacro.o `test -f tools/genmacro/genmacro.c || echo './'`tools/genmacro/genmacro.c
+gcc -fPIE -std=gnu99 -o genmacro  genmacro.o
+./genmacro nasm-macros.c nasm_standard_mac ./modules/parsers/nasm/nasm-std.mac
+gcc -fPIE -std=gnu99 -I.  -c -o genversion.o `test -f modules/preprocs/nasm/genversion.c || echo './'`modules/preprocs/nasm/genversion.c
+gcc -fPIE -std=gnu99 -o genversion  genversion.o
+./genversion version.mac
+./genmacro nasm-version.c nasm_version_mac version.mac
+./genmacro win64-nasm.c win64_nasm_stdmac ./modules/objfmts/coff/win64-nasm.mac
+./genmacro win64-gas.c win64_gas_stdmac ./modules/objfmts/coff/win64-gas.mac
+gcc -fPIE -std=gnu99 -I.  -c -o genstring.o `test -f genstring.c || echo './'`genstring.c
+gcc -fPIE -std=gnu99 -o genstring  genstring.o
+./genstring license_msg license.c ./COPYING
+make  install-recursive
+make[3]: Entering directory '/home/pi/tvheadend/build.linux/ffmpeg/yasm-1.3.0'
+Making install in po
+make[4]: Entering directory '/home/pi/tvheadend/build.linux/ffmpeg/yasm-1.3.0/po'
+if test "yasm" = "gettext-tools"; then \
+  /bin/mkdir -p /home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+    /usr/bin/install -c -m 644 ./$file \
+                    /home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+make[4]: Leaving directory '/home/pi/tvheadend/build.linux/ffmpeg/yasm-1.3.0/po'
+Making install in .
+make[4]: Entering directory '/home/pi/tvheadend/build.linux/ffmpeg/yasm-1.3.0'
+depbase=`echo modules/arch/x86/x86arch.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/arch/x86/x86arch.o -MD -MP -MF $depbase.Tpo -c -o modules/arch/x86/x86arch.o modules/arch/x86/x86arch.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/arch/x86/x86bc.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/arch/x86/x86bc.o -MD -MP -MF $depbase.Tpo -c -o modules/arch/x86/x86bc.o modules/arch/x86/x86bc.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/arch/x86/x86expr.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/arch/x86/x86expr.o -MD -MP -MF $depbase.Tpo -c -o modules/arch/x86/x86expr.o modules/arch/x86/x86expr.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/arch/x86/x86id.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/arch/x86/x86id.o -MD -MP -MF $depbase.Tpo -c -o modules/arch/x86/x86id.o modules/arch/x86/x86id.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/arch/lc3b/lc3barch.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/arch/lc3b/lc3barch.o -MD -MP -MF $depbase.Tpo -c -o modules/arch/lc3b/lc3barch.o modules/arch/lc3b/lc3barch.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/arch/lc3b/lc3bbc.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/arch/lc3b/lc3bbc.o -MD -MP -MF $depbase.Tpo -c -o modules/arch/lc3b/lc3bbc.o modules/arch/lc3b/lc3bbc.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/listfmts/nasm/nasm-listfmt.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/listfmts/nasm/nasm-listfmt.o -MD -MP -MF $depbase.Tpo -c -o modules/listfmts/nasm/nasm-listfmt.o modules/listfmts/nasm/nasm-listfmt.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/parsers/gas/gas-parser.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/parsers/gas/gas-parser.o -MD -MP -MF $depbase.Tpo -c -o modules/parsers/gas/gas-parser.o modules/parsers/gas/gas-parser.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/parsers/gas/gas-parse.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/parsers/gas/gas-parse.o -MD -MP -MF $depbase.Tpo -c -o modules/parsers/gas/gas-parse.o modules/parsers/gas/gas-parse.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/parsers/gas/gas-parse-intel.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/parsers/gas/gas-parse-intel.o -MD -MP -MF $depbase.Tpo -c -o modules/parsers/gas/gas-parse-intel.o modules/parsers/gas/gas-parse-intel.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/parsers/nasm/nasm-parser.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/parsers/nasm/nasm-parser.o -MD -MP -MF $depbase.Tpo -c -o modules/parsers/nasm/nasm-parser.o modules/parsers/nasm/nasm-parser.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/parsers/nasm/nasm-parse.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/parsers/nasm/nasm-parse.o -MD -MP -MF $depbase.Tpo -c -o modules/parsers/nasm/nasm-parse.o modules/parsers/nasm/nasm-parse.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/preprocs/nasm/nasm-preproc.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/preprocs/nasm/nasm-preproc.o -MD -MP -MF $depbase.Tpo -c -o modules/preprocs/nasm/nasm-preproc.o modules/preprocs/nasm/nasm-preproc.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/preprocs/nasm/nasm-pp.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/preprocs/nasm/nasm-pp.o -MD -MP -MF $depbase.Tpo -c -o modules/preprocs/nasm/nasm-pp.o modules/preprocs/nasm/nasm-pp.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/preprocs/nasm/nasmlib.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/preprocs/nasm/nasmlib.o -MD -MP -MF $depbase.Tpo -c -o modules/preprocs/nasm/nasmlib.o modules/preprocs/nasm/nasmlib.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/preprocs/nasm/nasm-eval.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/preprocs/nasm/nasm-eval.o -MD -MP -MF $depbase.Tpo -c -o modules/preprocs/nasm/nasm-eval.o modules/preprocs/nasm/nasm-eval.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/preprocs/raw/raw-preproc.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/preprocs/raw/raw-preproc.o -MD -MP -MF $depbase.Tpo -c -o modules/preprocs/raw/raw-preproc.o modules/preprocs/raw/raw-preproc.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/preprocs/cpp/cpp-preproc.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/preprocs/cpp/cpp-preproc.o -MD -MP -MF $depbase.Tpo -c -o modules/preprocs/cpp/cpp-preproc.o modules/preprocs/cpp/cpp-preproc.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/preprocs/gas/gas-preproc.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/preprocs/gas/gas-preproc.o -MD -MP -MF $depbase.Tpo -c -o modules/preprocs/gas/gas-preproc.o modules/preprocs/gas/gas-preproc.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/preprocs/gas/gas-eval.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/preprocs/gas/gas-eval.o -MD -MP -MF $depbase.Tpo -c -o modules/preprocs/gas/gas-eval.o modules/preprocs/gas/gas-eval.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/dbgfmts/codeview/cv-dbgfmt.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/dbgfmts/codeview/cv-dbgfmt.o -MD -MP -MF $depbase.Tpo -c -o modules/dbgfmts/codeview/cv-dbgfmt.o modules/dbgfmts/codeview/cv-dbgfmt.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/dbgfmts/codeview/cv-symline.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/dbgfmts/codeview/cv-symline.o -MD -MP -MF $depbase.Tpo -c -o modules/dbgfmts/codeview/cv-symline.o modules/dbgfmts/codeview/cv-symline.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/dbgfmts/codeview/cv-type.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/dbgfmts/codeview/cv-type.o -MD -MP -MF $depbase.Tpo -c -o modules/dbgfmts/codeview/cv-type.o modules/dbgfmts/codeview/cv-type.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/dbgfmts/dwarf2/dwarf2-dbgfmt.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/dbgfmts/dwarf2/dwarf2-dbgfmt.o -MD -MP -MF $depbase.Tpo -c -o modules/dbgfmts/dwarf2/dwarf2-dbgfmt.o modules/dbgfmts/dwarf2/dwarf2-dbgfmt.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/dbgfmts/dwarf2/dwarf2-line.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/dbgfmts/dwarf2/dwarf2-line.o -MD -MP -MF $depbase.Tpo -c -o modules/dbgfmts/dwarf2/dwarf2-line.o modules/dbgfmts/dwarf2/dwarf2-line.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/dbgfmts/dwarf2/dwarf2-aranges.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/dbgfmts/dwarf2/dwarf2-aranges.o -MD -MP -MF $depbase.Tpo -c -o modules/dbgfmts/dwarf2/dwarf2-aranges.o modules/dbgfmts/dwarf2/dwarf2-aranges.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/dbgfmts/dwarf2/dwarf2-info.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/dbgfmts/dwarf2/dwarf2-info.o -MD -MP -MF $depbase.Tpo -c -o modules/dbgfmts/dwarf2/dwarf2-info.o modules/dbgfmts/dwarf2/dwarf2-info.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/dbgfmts/null/null-dbgfmt.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/dbgfmts/null/null-dbgfmt.o -MD -MP -MF $depbase.Tpo -c -o modules/dbgfmts/null/null-dbgfmt.o modules/dbgfmts/null/null-dbgfmt.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/dbgfmts/stabs/stabs-dbgfmt.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/dbgfmts/stabs/stabs-dbgfmt.o -MD -MP -MF $depbase.Tpo -c -o modules/dbgfmts/stabs/stabs-dbgfmt.o modules/dbgfmts/stabs/stabs-dbgfmt.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/objfmts/dbg/dbg-objfmt.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/objfmts/dbg/dbg-objfmt.o -MD -MP -MF $depbase.Tpo -c -o modules/objfmts/dbg/dbg-objfmt.o modules/objfmts/dbg/dbg-objfmt.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/objfmts/bin/bin-objfmt.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/objfmts/bin/bin-objfmt.o -MD -MP -MF $depbase.Tpo -c -o modules/objfmts/bin/bin-objfmt.o modules/objfmts/bin/bin-objfmt.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/objfmts/elf/elf.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/objfmts/elf/elf.o -MD -MP -MF $depbase.Tpo -c -o modules/objfmts/elf/elf.o modules/objfmts/elf/elf.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/objfmts/elf/elf-objfmt.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/objfmts/elf/elf-objfmt.o -MD -MP -MF $depbase.Tpo -c -o modules/objfmts/elf/elf-objfmt.o modules/objfmts/elf/elf-objfmt.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/objfmts/elf/elf-x86-x86.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/objfmts/elf/elf-x86-x86.o -MD -MP -MF $depbase.Tpo -c -o modules/objfmts/elf/elf-x86-x86.o modules/objfmts/elf/elf-x86-x86.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/objfmts/elf/elf-x86-amd64.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/objfmts/elf/elf-x86-amd64.o -MD -MP -MF $depbase.Tpo -c -o modules/objfmts/elf/elf-x86-amd64.o modules/objfmts/elf/elf-x86-amd64.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/objfmts/elf/elf-x86-x32.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/objfmts/elf/elf-x86-x32.o -MD -MP -MF $depbase.Tpo -c -o modules/objfmts/elf/elf-x86-x32.o modules/objfmts/elf/elf-x86-x32.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/objfmts/coff/coff-objfmt.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/objfmts/coff/coff-objfmt.o -MD -MP -MF $depbase.Tpo -c -o modules/objfmts/coff/coff-objfmt.o modules/objfmts/coff/coff-objfmt.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/objfmts/coff/win64-except.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/objfmts/coff/win64-except.o -MD -MP -MF $depbase.Tpo -c -o modules/objfmts/coff/win64-except.o modules/objfmts/coff/win64-except.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/objfmts/macho/macho-objfmt.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/objfmts/macho/macho-objfmt.o -MD -MP -MF $depbase.Tpo -c -o modules/objfmts/macho/macho-objfmt.o modules/objfmts/macho/macho-objfmt.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/objfmts/rdf/rdf-objfmt.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/objfmts/rdf/rdf-objfmt.o -MD -MP -MF $depbase.Tpo -c -o modules/objfmts/rdf/rdf-objfmt.o modules/objfmts/rdf/rdf-objfmt.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo modules/objfmts/xdf/xdf-objfmt.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT modules/objfmts/xdf/xdf-objfmt.o -MD -MP -MF $depbase.Tpo -c -o modules/objfmts/xdf/xdf-objfmt.o modules/objfmts/xdf/xdf-objfmt.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo libyasm/assocdat.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT libyasm/assocdat.o -MD -MP -MF $depbase.Tpo -c -o libyasm/assocdat.o libyasm/assocdat.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo libyasm/bitvect.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT libyasm/bitvect.o -MD -MP -MF $depbase.Tpo -c -o libyasm/bitvect.o libyasm/bitvect.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo libyasm/bc-align.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT libyasm/bc-align.o -MD -MP -MF $depbase.Tpo -c -o libyasm/bc-align.o libyasm/bc-align.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo libyasm/bc-data.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT libyasm/bc-data.o -MD -MP -MF $depbase.Tpo -c -o libyasm/bc-data.o libyasm/bc-data.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo libyasm/bc-incbin.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT libyasm/bc-incbin.o -MD -MP -MF $depbase.Tpo -c -o libyasm/bc-incbin.o libyasm/bc-incbin.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo libyasm/bc-org.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT libyasm/bc-org.o -MD -MP -MF $depbase.Tpo -c -o libyasm/bc-org.o libyasm/bc-org.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo libyasm/bc-reserve.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT libyasm/bc-reserve.o -MD -MP -MF $depbase.Tpo -c -o libyasm/bc-reserve.o libyasm/bc-reserve.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo libyasm/bytecode.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT libyasm/bytecode.o -MD -MP -MF $depbase.Tpo -c -o libyasm/bytecode.o libyasm/bytecode.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo libyasm/errwarn.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT libyasm/errwarn.o -MD -MP -MF $depbase.Tpo -c -o libyasm/errwarn.o libyasm/errwarn.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo libyasm/expr.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT libyasm/expr.o -MD -MP -MF $depbase.Tpo -c -o libyasm/expr.o libyasm/expr.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo libyasm/file.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT libyasm/file.o -MD -MP -MF $depbase.Tpo -c -o libyasm/file.o libyasm/file.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo libyasm/floatnum.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT libyasm/floatnum.o -MD -MP -MF $depbase.Tpo -c -o libyasm/floatnum.o libyasm/floatnum.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo libyasm/hamt.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT libyasm/hamt.o -MD -MP -MF $depbase.Tpo -c -o libyasm/hamt.o libyasm/hamt.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo libyasm/insn.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT libyasm/insn.o -MD -MP -MF $depbase.Tpo -c -o libyasm/insn.o libyasm/insn.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo libyasm/intnum.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT libyasm/intnum.o -MD -MP -MF $depbase.Tpo -c -o libyasm/intnum.o libyasm/intnum.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo libyasm/inttree.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT libyasm/inttree.o -MD -MP -MF $depbase.Tpo -c -o libyasm/inttree.o libyasm/inttree.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo libyasm/linemap.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT libyasm/linemap.o -MD -MP -MF $depbase.Tpo -c -o libyasm/linemap.o libyasm/linemap.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo libyasm/md5.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT libyasm/md5.o -MD -MP -MF $depbase.Tpo -c -o libyasm/md5.o libyasm/md5.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo libyasm/mergesort.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT libyasm/mergesort.o -MD -MP -MF $depbase.Tpo -c -o libyasm/mergesort.o libyasm/mergesort.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo libyasm/phash.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT libyasm/phash.o -MD -MP -MF $depbase.Tpo -c -o libyasm/phash.o libyasm/phash.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo libyasm/section.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT libyasm/section.o -MD -MP -MF $depbase.Tpo -c -o libyasm/section.o libyasm/section.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo libyasm/strcasecmp.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT libyasm/strcasecmp.o -MD -MP -MF $depbase.Tpo -c -o libyasm/strcasecmp.o libyasm/strcasecmp.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo libyasm/strsep.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT libyasm/strsep.o -MD -MP -MF $depbase.Tpo -c -o libyasm/strsep.o libyasm/strsep.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo libyasm/symrec.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT libyasm/symrec.o -MD -MP -MF $depbase.Tpo -c -o libyasm/symrec.o libyasm/symrec.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo libyasm/valparam.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT libyasm/valparam.o -MD -MP -MF $depbase.Tpo -c -o libyasm/valparam.o libyasm/valparam.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo libyasm/value.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT libyasm/value.o -MD -MP -MF $depbase.Tpo -c -o libyasm/value.o libyasm/value.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo libyasm/xmalloc.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT libyasm/xmalloc.o -MD -MP -MF $depbase.Tpo -c -o libyasm/xmalloc.o libyasm/xmalloc.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo libyasm/xstrdup.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT libyasm/xstrdup.o -MD -MP -MF $depbase.Tpo -c -o libyasm/xstrdup.o libyasm/xstrdup.c &&\
+mv -f $depbase.Tpo $depbase.Po
+./genperf ./modules/arch/x86/x86cpu.gperf x86cpu.c
+depbase=`echo x86cpu.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT x86cpu.o -MD -MP -MF $depbase.Tpo -c -o x86cpu.o x86cpu.c &&\
+mv -f $depbase.Tpo $depbase.Po
+./genperf ./modules/arch/x86/x86regtmod.gperf x86regtmod.c
+depbase=`echo x86regtmod.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT x86regtmod.o -MD -MP -MF $depbase.Tpo -c -o x86regtmod.o x86regtmod.c &&\
+mv -f $depbase.Tpo $depbase.Po
+./re2c -s -o lc3bid.c ./modules/arch/lc3b/lc3bid.re
+depbase=`echo lc3bid.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT lc3bid.o -MD -MP -MF $depbase.Tpo -c -o lc3bid.o lc3bid.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo gas-token.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT gas-token.o -MD -MP -MF $depbase.Tpo -c -o gas-token.o gas-token.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo nasm-token.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT nasm-token.o -MD -MP -MF $depbase.Tpo -c -o nasm-token.o nasm-token.c &&\
+mv -f $depbase.Tpo $depbase.Po
+gcc -fPIE -std=gnu99 -I.  -c -o genmodule.o `test -f libyasm/genmodule.c || echo './'`libyasm/genmodule.c
+gcc -fPIE -std=gnu99 -o genmodule  genmodule.o
+./genmodule ./libyasm/module.in Makefile
+depbase=`echo module.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT module.o -MD -MP -MF $depbase.Tpo -c -o module.o module.c &&\
+mv -f $depbase.Tpo $depbase.Po
+rm -f libyasm.a
+ar cru libyasm.a modules/arch/x86/x86arch.o modules/arch/x86/x86bc.o modules/arch/x86/x86expr.o modules/arch/x86/x86id.o modules/arch/lc3b/lc3barch.o modules/arch/lc3b/lc3bbc.o modules/listfmts/nasm/nasm-listfmt.o modules/parsers/gas/gas-parser.o modules/parsers/gas/gas-parse.o modules/parsers/gas/gas-parse-intel.o modules/parsers/nasm/nasm-parser.o modules/parsers/nasm/nasm-parse.o modules/preprocs/nasm/nasm-preproc.o modules/preprocs/nasm/nasm-pp.o modules/preprocs/nasm/nasmlib.o modules/preprocs/nasm/nasm-eval.o modules/preprocs/raw/raw-preproc.o modules/preprocs/cpp/cpp-preproc.o modules/preprocs/gas/gas-preproc.o modules/preprocs/gas/gas-eval.o modules/dbgfmts/codeview/cv-dbgfmt.o modules/dbgfmts/codeview/cv-symline.o modules/dbgfmts/codeview/cv-type.o modules/dbgfmts/dwarf2/dwarf2-dbgfmt.o modules/dbgfmts/dwarf2/dwarf2-line.o modules/dbgfmts/dwarf2/dwarf2-aranges.o modules/dbgfmts/dwarf2/dwarf2-info.o modules/dbgfmts/null/null-dbgfmt.o modules/dbgfmts/stabs/stabs-dbgfmt.o modules/objfmts/dbg/dbg-objfmt.o modules/objfmts/bin/bin-objfmt.o modules/objfmts/elf/elf.o modules/objfmts/elf/elf-objfmt.o modules/objfmts/elf/elf-x86-x86.o modules/objfmts/elf/elf-x86-amd64.o modules/objfmts/elf/elf-x86-x32.o modules/objfmts/coff/coff-objfmt.o modules/objfmts/coff/win64-except.o modules/objfmts/macho/macho-objfmt.o modules/objfmts/rdf/rdf-objfmt.o modules/objfmts/xdf/xdf-objfmt.o libyasm/assocdat.o libyasm/bitvect.o libyasm/bc-align.o libyasm/bc-data.o libyasm/bc-incbin.o libyasm/bc-org.o libyasm/bc-reserve.o libyasm/bytecode.o libyasm/errwarn.o libyasm/expr.o libyasm/file.o libyasm/floatnum.o libyasm/hamt.o libyasm/insn.o libyasm/intnum.o libyasm/inttree.o libyasm/linemap.o libyasm/md5.o libyasm/mergesort.o libyasm/phash.o libyasm/section.o libyasm/strcasecmp.o libyasm/strsep.o libyasm/symrec.o libyasm/valparam.o libyasm/value.o libyasm/xmalloc.o libyasm/xstrdup.o x86cpu.o x86regtmod.o lc3bid.o gas-token.o nasm-token.o module.o
+ranlib libyasm.a
+depbase=`echo frontends/yasm/yasm.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT frontends/yasm/yasm.o -MD -MP -MF $depbase.Tpo -c -o frontends/yasm/yasm.o frontends/yasm/yasm.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo frontends/yasm/yasm-options.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT frontends/yasm/yasm-options.o -MD -MP -MF $depbase.Tpo -c -o frontends/yasm/yasm-options.o frontends/yasm/yasm-options.c &&\
+mv -f $depbase.Tpo $depbase.Po
+gcc -fPIE -std=gnu99  -g -O2   -o yasm frontends/yasm/yasm.o frontends/yasm/yasm-options.o libyasm.a
+depbase=`echo frontends/tasm/tasm.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT frontends/tasm/tasm.o -MD -MP -MF $depbase.Tpo -c -o frontends/tasm/tasm.o frontends/tasm/tasm.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo frontends/tasm/tasm-options.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT frontends/tasm/tasm-options.o -MD -MP -MF $depbase.Tpo -c -o frontends/tasm/tasm-options.o frontends/tasm/tasm-options.c &&\
+mv -f $depbase.Tpo $depbase.Po
+gcc -fPIE -std=gnu99  -g -O2   -o ytasm frontends/tasm/tasm.o frontends/tasm/tasm-options.o libyasm.a
+depbase=`echo frontends/vsyasm/vsyasm.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -fPIE -std=gnu99 -DHAVE_CONFIG_H -I.     -g -O2 -MT frontends/vsyasm/vsyasm.o -MD -MP -MF $depbase.Tpo -c -o frontends/vsyasm/vsyasm.o frontends/vsyasm/vsyasm.c &&\
+mv -f $depbase.Tpo $depbase.Po
+gcc -fPIE -std=gnu99  -g -O2   -o vsyasm frontends/vsyasm/vsyasm.o frontends/yasm/yasm-options.o libyasm.a
+make[5]: Entering directory '/home/pi/tvheadend/build.linux/ffmpeg/yasm-1.3.0'
+ /bin/mkdir -p '/home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg/bin'
+  /usr/bin/install -c yasm ytasm vsyasm '/home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg/bin'
+ /bin/mkdir -p '/home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg/lib'
+ /usr/bin/install -c -m 644  libyasm.a '/home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg/lib'
+ ( cd '/home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg/lib' && ranlib libyasm.a )
+make  install-exec-hook
+make[6]: Entering directory '/home/pi/tvheadend/build.linux/ffmpeg/yasm-1.3.0'
+make[6]: Nothing to be done for 'install-exec-hook'.
+make[6]: Leaving directory '/home/pi/tvheadend/build.linux/ffmpeg/yasm-1.3.0'
+ /bin/mkdir -p '/home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg/include'
+ /usr/bin/install -c -m 644 libyasm.h '/home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg/include'
+ /bin/mkdir -p '/home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg/share/man/man1'
+ /bin/mkdir -p '/home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg/share/man/man1'
+ /usr/bin/install -c -m 644 yasm.1 '/home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg/share/man/man1'
+ /bin/mkdir -p '/home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg/share/man/man7'
+ /usr/bin/install -c -m 644 yasm_arch.7 yasm_parsers.7 yasm_dbgfmts.7 yasm_objfmts.7 '/home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg/share/man/man7'
+ /bin/mkdir -p '/home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg/share/man/man7'
+ /bin/mkdir -p '/home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg/include/libyasm'
+ /usr/bin/install -c -m 644 libyasm/arch.h libyasm/assocdat.h libyasm/bitvect.h libyasm/bytecode.h libyasm/compat-queue.h libyasm/coretype.h libyasm/dbgfmt.h libyasm/errwarn.h libyasm/expr.h libyasm/file.h libyasm/floatnum.h libyasm/hamt.h libyasm/insn.h libyasm/intnum.h libyasm/inttree.h libyasm/linemap.h libyasm/listfmt.h libyasm/md5.h libyasm/module.h libyasm/objfmt.h libyasm/parser.h libyasm/phash.h libyasm/preproc.h libyasm/section.h libyasm/symrec.h libyasm/valparam.h libyasm/value.h '/home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg/include/libyasm'
+ /bin/mkdir -p '/home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg/include'
+ /usr/bin/install -c -m 644 libyasm-stdint.h '/home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg/include'
+make[5]: Leaving directory '/home/pi/tvheadend/build.linux/ffmpeg/yasm-1.3.0'
+make[4]: Leaving directory '/home/pi/tvheadend/build.linux/ffmpeg/yasm-1.3.0'
+make[3]: Leaving directory '/home/pi/tvheadend/build.linux/ffmpeg/yasm-1.3.0'
+make[2]: Leaving directory '/home/pi/tvheadend/build.linux/ffmpeg/yasm-1.3.0'
+WGET            http://ftp.videolan.org/x264/snapshots/x264-snapshot-20170515-2245.tar.bz2
+
+
+2018-07-26 23:29:44 URL:http://ftp.videolan.org/x264/snapshots/x264-snapshot-20170515-2245.tar.bz2 [735633/735633] -> "/home/pi/tvheadend/build.linux/ffmpeg/x264-snapshot-20170515-2245.tar.bz2" [1]
+SHA1SUM test '8079e472b3af5d54a20a8907d364b615a67fa6f2' == '8079e472b3af5d54a20a8907d364b615a67fa6f2': OK
+UNTAR           x264-snapshot-20170515-2245.tar.bz2
+cd /home/pi/tvheadend/build.linux/ffmpeg/x264-snapshot-20170515-2245 && FFMPEG_PREFIX=/home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg PKG_CONFIG=/home/pi/tvheadend/support/pkg-config.ffmpeg ./configure --prefix=/ffmpeg --enable-static --disable-shared \
+        --extra-asflags="-DPIC" \
+        --extra-cflags="-fPIE" \
+        --disable-cli \
+        --disable-swscale \
+        --disable-lavf \
+        --disable-avs \
+        --disable-ffms \
+        --disable-gpac \
+        --disable-lsmash \
+
+Unknown option --disable-shared, ignored
+platform:      ARM
+byte order:    little-endian
+system:        LINUX
+cli:           no
+libx264:       internal
+shared:        no
+static:        yes
+asm:           yes
+interlaced:    yes
+avs:           no
+lavf:          no
+ffms:          no
+mp4:           no
+gpl:           yes
+thread:        posix
+opencl:        yes
+filters:       crop select_every
+lto:           no
+debug:         no
+gprof:         no
+strip:         no
+PIC:           no
+bit depth:     8
+chroma format: all
+
+You can run 'make' or 'make fprofiled' now.
+DESTDIR=/home/pi/tvheadend/build.linux/ffmpeg/build \
+        make -C /home/pi/tvheadend/build.linux/ffmpeg/x264-snapshot-20170515-2245 install
+make[2]: Entering directory '/home/pi/tvheadend/build.linux/ffmpeg/x264-snapshot-20170515-2245'
+cat common/opencl/x264-cl.h common/opencl/motionsearch.cl common/opencl/subpel.cl common/opencl/intra.cl common/opencl/weightp.cl common/opencl/downscale.cl common/opencl/bidir.cl | ./tools/cltostr.sh common/oclobj.h
+dependency file generation...
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o common/mc.o common/mc.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o common/predict.o common/predict.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o common/pixel.o common/pixel.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o common/macroblock.o common/macroblock.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o common/frame.o common/frame.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o common/dct.o common/dct.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o common/cpu.o common/cpu.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o common/cabac.o common/cabac.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o common/common.o common/common.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o common/osdep.o common/osdep.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o common/rectangle.o common/rectangle.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o common/set.o common/set.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o common/quant.o common/quant.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o common/deblock.o common/deblock.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o common/vlc.o common/vlc.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o common/mvpred.o common/mvpred.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o common/bitstream.o common/bitstream.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o encoder/analyse.o encoder/analyse.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o encoder/me.o encoder/me.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o encoder/ratecontrol.o encoder/ratecontrol.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o encoder/set.o encoder/set.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o encoder/macroblock.o encoder/macroblock.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o encoder/cabac.o encoder/cabac.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o encoder/cavlc.o encoder/cavlc.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o encoder/encoder.o encoder/encoder.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o encoder/lookahead.o encoder/lookahead.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o common/threadpool.o common/threadpool.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o common/arm/mc-c.o common/arm/mc-c.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o common/arm/predict-c.o common/arm/predict-c.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o common/opencl.o common/opencl.c
+gcc -Wno-maybe-uninitialized -Wshadow -O3 -ffast-math  -Wall -I. -I. -fPIE -std=gnu99 -D_GNU_SOURCE -mcpu=cortex-a8 -mfpu=neon -fomit-frame-pointer -fno-tree-vectorize   -c -o encoder/slicetype-cl.o encoder/slicetype-cl.c
+gcc -I. -I. -DPIC -c -DSTACK_ALIGNMENT=4 -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8 -o common/arm/cpu-a.o common/arm/cpu-a.S
+gcc -I. -I. -DPIC -c -DSTACK_ALIGNMENT=4 -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8 -o common/arm/pixel-a.o common/arm/pixel-a.S
+gcc -I. -I. -DPIC -c -DSTACK_ALIGNMENT=4 -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8 -o common/arm/mc-a.o common/arm/mc-a.S
+gcc -I. -I. -DPIC -c -DSTACK_ALIGNMENT=4 -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8 -o common/arm/dct-a.o common/arm/dct-a.S
+gcc -I. -I. -DPIC -c -DSTACK_ALIGNMENT=4 -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8 -o common/arm/quant-a.o common/arm/quant-a.S
+gcc -I. -I. -DPIC -c -DSTACK_ALIGNMENT=4 -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8 -o common/arm/deblock-a.o common/arm/deblock-a.S
+gcc -I. -I. -DPIC -c -DSTACK_ALIGNMENT=4 -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8 -o common/arm/predict-a.o common/arm/predict-a.S
+gcc -I. -I. -DPIC -c -DSTACK_ALIGNMENT=4 -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8 -o common/arm/bitstream-a.o common/arm/bitstream-a.S
+rm -f libx264.a
+gcc-ar rc libx264.a  common/mc.o common/predict.o common/pixel.o common/macroblock.o common/frame.o common/dct.o common/cpu.o common/cabac.o common/common.o common/osdep.o common/rectangle.o common/set.o common/quant.o common/deblock.o common/vlc.o common/mvpred.o common/bitstream.o encoder/analyse.o encoder/me.o encoder/ratecontrol.o encoder/set.o encoder/macroblock.o encoder/cabac.o encoder/cavlc.o encoder/encoder.o encoder/lookahead.o common/threadpool.o common/arm/mc-c.o common/arm/predict-c.o common/opencl.o encoder/slicetype-cl.o common/arm/cpu-a.o common/arm/pixel-a.o common/arm/mc-a.o common/arm/dct-a.o common/arm/quant-a.o common/arm/deblock-a.o common/arm/predict-a.o common/arm/bitstream-a.o
+gcc-ranlib libx264.a
+install -d /home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg/include
+install -d /home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg/lib
+install -d /home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg/lib/pkgconfig
+install -m 644 ./x264.h /home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg/include
+install -m 644 x264_config.h /home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg/include
+install -m 644 x264.pc /home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg/lib/pkgconfig
+install -m 644 libx264.a /home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg/lib
+gcc-ranlib /home/pi/tvheadend/build.linux/ffmpeg/build/ffmpeg/lib/libx264.a
+make[2]: Leaving directory '/home/pi/tvheadend/build.linux/ffmpeg/x264-snapshot-20170515-2245'
+WGET            http://ftp.videolan.org/videolan/x265/x265_2.4.tar.gz
+
