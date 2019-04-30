@@ -11,10 +11,10 @@ https://ffmpeg.zeranoe.com/builds/
 
 
 ## 准备msys2
-http://www.msys2.org/
-http://repo.msys2.org/distrib/x86_64/msys2-x86_64-20180531.exe 64位
-pacman -S mingw-w64-i686-toolchain 32位
-pacman -S mingw-w64-x86_64-toolchain 64位
+http://www.msys2.org/ 
+http://repo.msys2.org/distrib/x86_64/msys2-x86_64-20180531.exe 64位 
+pacman -S mingw-w64-i686-toolchain 32位 
+pacman -S mingw-w64-x86_64-toolchain 64位 
 :: 共有 17 组员在组 mingw-w64-x86_64-toolchain 中：
 :: 软件库 mingw64
    1) mingw-w64-x86_64-binutils  2) mingw-w64-x86_64-crt-git
