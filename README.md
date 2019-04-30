@@ -9,6 +9,24 @@ shared是动态编译的exe+dll
 dev是.h和.lib等
 https://ffmpeg.zeranoe.com/builds/
 
+
+## 准备msys2
+http://www.msys2.org/
+http://repo.msys2.org/distrib/x86_64/msys2-x86_64-20180531.exe 64位
+pacman -S mingw-w64-i686-toolchain 32位
+pacman -S mingw-w64-x86_64-toolchain 64位
+:: 共有 17 组员在组 mingw-w64-x86_64-toolchain 中：
+:: 软件库 mingw64
+   1) mingw-w64-x86_64-binutils  2) mingw-w64-x86_64-crt-git
+   3) mingw-w64-x86_64-gcc  4) mingw-w64-x86_64-gcc-ada
+   5) mingw-w64-x86_64-gcc-fortran  6) mingw-w64-x86_64-gcc-libgfortran
+   7) mingw-w64-x86_64-gcc-libs  8) mingw-w64-x86_64-gcc-objc
+   9) mingw-w64-x86_64-gdb  10) mingw-w64-x86_64-headers-git
+   11) mingw-w64-x86_64-libmangle-git  12) mingw-w64-x86_64-libwinpthread-git
+   13) mingw-w64-x86_64-make  14) mingw-w64-x86_64-pkg-config
+   15) mingw-w64-x86_64-tools-git  16) mingw-w64-x86_64-winpthreads-git
+   17) mingw-w64-x86_64-winstorecompat-git
+
 ## ffmpeg2.3.6 
 1 安装MinGW+MSYS 
 C:\MinGW\msys\1.0\msys.bat 
@@ -53,6 +71,7 @@ win下打开bin\pkg-config.exe检查libglib-2.0-0.dll是否正常
 >Creating config.mak, config.h, and doc/config.texi...
 
 >make
+
 
 ## 基本用法
 ffmpeg -i input.mp4 output.avi
